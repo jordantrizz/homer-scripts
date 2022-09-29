@@ -1,5 +1,5 @@
 # homer-scripts
-A collection of scripts to to make homer awesome.
+A collection of scripts to display information in homer.
 # Scripts
 * proxmox-report.sh - get a list of running VM's on proxmox
 * mikrotik-dhcp-leases.sh - grab current DHCP leases on your Mikrotik router.
