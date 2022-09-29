@@ -31,6 +31,7 @@ message:
 # Notes
 * The iframe using the message area is what I've decided to use, you can do anything you wish here.
 * I created a separate page to hold the data as it makes it cleaner.
+* The assumption is that you're using SSH keys to authenticate to Proxmox and Mikrotik.
 
 # Examples
 ## Running proxmox-report.sh via Synology Scheduled Task
