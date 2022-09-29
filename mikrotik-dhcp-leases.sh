@@ -1,4 +1,5 @@
 #!/bin/bash
+[ -z $BASH ] && { exec bash "$0" "$@" || exit; }
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 CONFIG="$SCRIPT_DIR/env.cfg"
 DATE=`date`
