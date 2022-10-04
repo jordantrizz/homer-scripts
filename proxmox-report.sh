@@ -1,5 +1,7 @@
 #!/bin/bash
+# -- run bash if invokved via sh
 [ -z $BASH ] && { exec bash "$0" "$@" || exit; }
+# -- Variables
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 CONFIG="$SCRIPT_DIR/env.cfg"
 DATE=`date`
@@ -14,7 +16,11 @@ fi
 
 # -- ssh command
 scmd () {
-	eval "ssh ${PROXMOX_USER}@${PROXMOX_HOST} $@"
+  if [[ $PROXMOX_PASSWORD ]]; then
+    eval "sshpass -p ${$PROXMOX_PASSWORD} ${PROXMOX_USER}@${PROXMOX_HOST} $@"
+  else
+	  eval "ssh ${PROXMOX_USER}@${PROXMOX_HOST} $@"
+	fi
 }
 
 PROXMOX_UPTIME=$(scmd uptime)
