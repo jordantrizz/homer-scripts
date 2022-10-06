@@ -2,6 +2,7 @@
 A collection of scripts to display information in homer.
 # Scripts
 * proxmox-report.sh - get a list of running VM's on proxmox
+* proxmox-report-api.sh - get more informaton about your proxmox node (In Development)
 * mikrotik-dhcp-leases.sh - grab current DHCP leases on your Mikrotik router.
 
 # Installation
@@ -51,5 +52,10 @@ message:
 * /home/home-scripts = Location of this repositories scripts
 * /home/homer/data = Data folder for homer's /assets/tools/ folder that is publically available.
 
+## Proxmox API
+* https://pve.proxmox.com/wiki/Proxmox_VE_API
+* https://pve.proxmox.com/pve-docs/api-viewer/index.html#/nodes
+
 # ToDo
 * More Proxmox information, list IP's, memory, CPU per instance and overall stats.
+* Work on proxmox-report-api.sh
