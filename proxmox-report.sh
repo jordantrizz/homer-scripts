@@ -4,7 +4,7 @@
 # -- Variables
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 CONFIG="$SCRIPT_DIR/env.cfg"
-DATE=`date`
+DATE=ate +"%Y-%m-%d %T"
 
 # -- check for env.cnf
 if [[ -a $CONFIG ]]; then
